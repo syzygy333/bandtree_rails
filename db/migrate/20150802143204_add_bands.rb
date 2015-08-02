@@ -10,7 +10,7 @@ class AddBands < ActiveRecord::Migration
       t.string :official_link
       t.string :wiki_link
       t.text :biography
-      t.boolean :private, default: false
+      t.boolean :private?, default: false
     end
   end
 end

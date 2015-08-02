@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20150802143204) do
     t.string  "official_link"
     t.string  "wiki_link"
     t.text    "biography"
-    t.boolean "private",        default: false
+    t.boolean "private?",       default: false
   end
 
   create_table "users", force: :cascade do |t|
