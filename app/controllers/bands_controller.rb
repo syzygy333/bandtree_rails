@@ -5,6 +5,7 @@ class BandsController < ApplicationController
 
   def new
     @band = Band.new
+    @band.portrait = params[:file]
   end
 
   def create

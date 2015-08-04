@@ -11,22 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150802143204) do
+ActiveRecord::Schema.define(version: 20150804124302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bands", force: :cascade do |t|
-    t.string  "name",                           null: false
-    t.string  "record_label"
-    t.integer "year_formed"
-    t.integer "year_disbanded"
-    t.integer "reunion_start"
-    t.integer "reunion_end"
-    t.string  "official_link"
-    t.string  "wiki_link"
-    t.text    "biography"
-    t.boolean "private?",       default: false
+    t.string   "name",                                    null: false
+    t.string   "record_label"
+    t.integer  "year_formed"
+    t.integer  "year_disbanded"
+    t.integer  "reunion_start"
+    t.integer  "reunion_end"
+    t.string   "official_link"
+    t.string   "wiki_link"
+    t.text     "biography"
+    t.boolean  "private?",                default: false
+    t.string   "band_photo_file_name"
+    t.string   "band_photo_content_type"
+    t.integer  "band_photo_file_size"
+    t.datetime "band_photo_updated_at"
+    t.string   "portrait"
   end
 
   create_table "users", force: :cascade do |t|

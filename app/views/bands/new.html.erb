@@ -1,6 +1,11 @@
 <h1>Add a band</h1>
   <%= form_for @band do |f| %>
     <div class="field">
+      <%= f.label :portrait, "Band Portrait" %><br />
+      <%= f.file_field :portrait %>
+    </div>
+
+    <div class="field">
       <%= f.label :name %>
       <%= f.text_field :name %>
     </div>
