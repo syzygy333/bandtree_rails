@@ -1,0 +1,18 @@
+<div class="portrait">
+<%= image_tag(@band.portrait) %>
+</div>
+<div class="row band-show">
+  <div class="small-4 large-12 columns">
+    <h1><%= @band.name %></h1>
+    <div class="panel radius">
+      <p><strong>Record Label:</strong> <%= @band.record_label %></p>
+      <p><strong>Years Active:</strong> <%= @band.year_formed %> - <%= @band.year_disbanded %> </p>
+      <p><strong>Reunion Activity:</strong> <%= @band.reunion_start %>-<%= @band.reunion_end %></p>
+      <p><strong>Official Website:</strong> <%= link_to "#{@band.official_link.sub(/^https?\:\/\//, '').sub(/^www./,'')}", @band.official_link %></p>
+      <p><strong>Wiki:</strong> <%= link_to "#{@band.wiki_link.sub(/^https?\:\/\//, '').sub(/^www./,'')}" %></p>
+      <p><strong>Biography:</strong> <%= @band.biography %></p>
+    </div>
+    <%= link_to "Delete Band", band_path(@band), method: :delete,
+      class: "tiny button alert" %>
+  <div>
+</div>
