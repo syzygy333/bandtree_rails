@@ -1,4 +1,4 @@
-<h1>Add a band</h1>
+<h1>Edit band</h1>
   <%= form_for @band do |f| %>
     <div class="field">
       <%= f.label :portrait, "Band Portrait" %><br />
@@ -68,6 +68,6 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Add", class: "tiny button radius" %>
+      <%= f.submit "Submit Edits", class: "tiny button" %>
     </div>
   <% end %>
